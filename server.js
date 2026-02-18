@@ -423,9 +423,23 @@ socket.on('login', async (data) => {
     });
 });
 
+
 const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
-    console.log(`ChatApp server running on http://localhost:${PORT}`);
-    // console.log(`Password: ${CONFIG.CHAT_PASSWORD}`);
-    console.log(`Admin ID: ${CONFIG.ADMIN_ID}`);
+server.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
+  console.log(`Admin ID: ${CONFIG.ADMIN_ID}`);
 });
+
+
+
+
+
+
+
+// const PORT = process.env.PORT || 3000;
+// server.listen(PORT, () => {
+//     console.log(`ChatApp server running on http://localhost:${PORT}`);
+//     // console.log(`Password: ${CONFIG.CHAT_PASSWORD}`);
+//     console.log(`Admin ID: ${CONFIG.ADMIN_ID}`);
+// });
+
