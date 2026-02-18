@@ -14,14 +14,13 @@
 const mongoose = require("mongoose");
 
 mongoose
-  .connect("mongodb+srv://ramsingh1561:%40%4015617379@cluster0.lnoewgy.mongodb.net/chatapp?retryWrites=true&w=majority")
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("MongoDB Connected ✅");
   })
   .catch((err) => {
     console.log("Mongo Error ❌", err);
   });
-
 // adding mangodatabase end
 
 
@@ -431,15 +430,11 @@ server.listen(PORT, "0.0.0.0", () => {
 });
 
 
-
-
-
-
-
 // const PORT = process.env.PORT || 3000;
 // server.listen(PORT, () => {
 //     console.log(`ChatApp server running on http://localhost:${PORT}`);
 //     // console.log(`Password: ${CONFIG.CHAT_PASSWORD}`);
 //     console.log(`Admin ID: ${CONFIG.ADMIN_ID}`);
 // });
+
 
